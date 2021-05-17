@@ -1,0 +1,112 @@
+.hl {
+    background-color: #849fdb;
+    height: 100%;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.userinfo {
+    /* background-color: rgb(68, 74, 90); */
+    background-color: #849fdb;
+    height: 100%;
+    border-radius: 0.6rem;
+    text-align: right;
+    color: #fff;
+    line-height: 4rem;
+}
+
+.row2 {
+    margin-top: 0.8rem;
+}
+
+.bl {
+    background-color: #849fdb;
+    height: 100%;
+}
+
+.br {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 0.6rem;
+    position: relative;
+}
+table{
+    /* height: 800px; */
+    /* background-color: #000; */
+}
+
+ul {
+    color: #fff;
+    list-style-type: square;
+}
+
+li {
+    margin: 1rem 0;
+}
+
+a:link,
+a:visited {
+    color: #fff;
+}
+
+span {
+    color: #fff;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.buttonn:hover {
+    background-color: #e5e9f0;
+    color: #000;
+    text-decoration: none;
+    border-radius: 0.6rem;
+}
+
+.box {
+    display: none;
+    width: 75%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    background-color: rgba(68, 74, 90, 0.9);
+    z-index: 1000;
+    color: #fff;
+    min-height: 50%;
+    height: auto !important;
+}
+
+.box a {
+    float: right;
+    color: red;
+    text-decoration: none;
+}
+
+.box input {
+    width: 50%;
+    margin-left: 18%;
+}
+
+.box button {
+    margin-left: 38%;
+}
+
+.sear {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sear input {
+    width: 30%;
+}
+
+.sear {
+    margin-right: 5%;
+}
