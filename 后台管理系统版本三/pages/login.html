@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页</title>
+    <link href="/static/css/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="bac">
+        <div class="headd">欢迎登录 - 信邮后台管理系统</div>
+        <form onsubmit="login(this);return false;" autocomplete="off" class="box">
+            <input type="text" class="box-ipt" name="username" oninput="cacheInput(this)" placeholder="请输入用户名" required/>
+            <br/>
+            <input class="box-ipt" type="password" name="passwd" oninput="cacheInput(this)" placeholder="请输入密码" required/>
+            <br/>
+            <input type="submit" value="登录" class="box-btn"></input>
+        </form>
+    </div>
+</body>
+<script>
+    if (localStorage.getItem('token')) {
+        try {
+            let u = localStorage.getItem('userinfo')
+            if (u) {
+                let uinfo = JSON.parse(u)
+                if (uinfo.expires + uinfo.time > Date.now()) {
+                    location.href = '/xinyou'
+                }
+            }
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
+    let loginfo = {
+        username: '',
+        passwd: ''
+    }
+
+    function cacheInput(t) {
+        if (t.name === 'username') {
+            loginfo.username = t.value.trim()
+        } else if (t.name === 'passwd') {
+            loginfo.passwd = t.value
+        }
+    }
+
+    function login(t) {
+        if (loginfo.username === '' || loginfo.passwd === '') {
+            return
+        }
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'content-type': 'text/plain'
+            },
+            body: JSON.stringify(loginfo)
+        }).then(async res => {
+            if (!res.ok) {
+                let errtext = await res.text()
+                throw new Error(`${res.status} : ${errtext}`)
+            } else {
+                return res.json()
+            }
+
+        }).then(d => {
+            localStorage.setItem('token', d.token)
+            localStorage.setItem('userinfo', JSON.stringify(d.userinfo))
+            location.href = '/xinyou'
+        }).catch(err => {
+            alert(err.message)
+        })
+    }
+</script>
+
+</html>
