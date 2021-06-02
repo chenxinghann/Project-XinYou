@@ -1,0 +1,16 @@
+/* pages/leaveMessageSuccess/leaveMessageSuccess.wxss */
+.container text{
+  color: #cf9797;
+  font-weight: 600;
+  position: relative;
+  top: 360rpx;
+}
+#return{
+  border-radius: 200rpx;
+  background-color: #be7676;
+  color: #fff;
+}
+button{
+  position: relative;
+  top: 390rpx;
+}

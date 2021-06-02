@@ -1,0 +1,26 @@
+<!--pages/theme/theme.wxml-->
+<view class="container">
+  <view class="content" style="border:2px solid {{exctheme.themecolor}}">
+    <image src="{{backimg}}"></image>
+    <textarea placeholder="对未来的我说：" class="text" bindinput="txtarea" style="color:{{lettertcolor}};font-family:'{{lettertstyle}}'"></textarea>
+    <view class="corner" style='border-right-color:{{exctheme.themecolor}}'></view>
+    <view class="cover"></view>
+  </view>
+  <view class="letterId">幸运数字</view>
+  <input type="text" bindblur="letterid" class="idInput" name="name" placeholder="添加你的幸运数字" />
+  <view class="choice"> 
+    <view bindtap="goBacimg" style="background-color:{{exctheme.themecolor}}">
+      <image id="iconImg" src="../../images/iconImg.png"></image>
+    </view>
+    <view bindtap="goTime" style="background-color:{{exctheme.themecolor}}">
+      <image id="iconTime" src="../../images/iconTime.png"></image>
+    </view>
+    <view bindtap="goTxt" style="background-color:{{exctheme.themecolor}}">
+      <image id="iconTxt" src="../../images/iconTxt.png"></image>
+    </view>
+  </view>
+  <view class="btn"  bindtap="goSendletter">
+    <button style="background-color:#E3B1BA">放入时光胶囊</button>
+  </view>
+
+</view>

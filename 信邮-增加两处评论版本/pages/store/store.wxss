@@ -1,0 +1,81 @@
+/* pages/store/store.wxss */
+.container {
+  flex-direction: row;
+  justify-content: center;
+}
+.topbar{
+  padding: 0;
+  margin: 0;
+}
+.head {
+  width: 20%;
+  height: 60rpx;
+  background-color: #E3B1BA;
+  border-right: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 60rpx;
+}
+
+.navigator-hover {
+  color: white;
+}
+
+.hl{
+  position: absolute;
+  top: 20rpx;
+  left: 8.5%;
+  border-top-left-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+  font-weight: bolder;
+  color: white;
+}
+.h2{
+  position: absolute;
+  top: 20rpx;
+  left: 29.5%;
+}
+.h3{
+  position: absolute;
+  top: 20rpx;
+  right: 29.5%;
+}
+.hr{
+  position: absolute;
+  top: 20rpx;
+  right: 8.5%;
+  border-top-right-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+.lettertheme{
+  width: 100%;
+  margin-top: -60rpx;
+}
+.img{
+  width: 300rpx;
+  float: left;
+  height: 400rpx;
+  margin-left: 50rpx;
+  margin-bottom: 30rpx;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+.themename{
+  background-color: whitesmoke;
+  width: 75rpx;
+  position: relative;
+  top: -48rpx;
+  left:228rpx;
+}
+
+
+
+
+
+
+
+
+

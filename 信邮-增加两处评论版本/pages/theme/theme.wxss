@@ -1,0 +1,101 @@
+/* pages/theme/theme.wxss */
+
+.content{
+  width: 600rpx;
+  height: 700rpx;
+  margin-top: -100rpx;
+  border-radius: 80rpx 80rpx 0 0;
+  overflow: hidden;
+}
+.text{
+  position: absolute;
+  top: 130rpx;
+  left: 100rpx;
+  width: 550rpx;
+  height: 650rpx;
+  z-index: 9999;
+  max-lines: -1;
+  
+}
+.content image{
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 8888;
+}
+.corner{
+  border: 30px solid transparent;
+  border-radius: 0 15rpx 15rpx 0;
+  width: 0rpx;
+  height: 0rpx;
+  position: absolute;
+  top: 665rpx;
+  right: 95rpx;
+  transform: rotate(45deg);
+}
+.cover{
+  border: 30px solid transparent;
+  border-right-color: white;
+  border-bottom-color: white;
+  position: absolute;
+  right: 70rpx;
+  top: 720rpx;
+  width: 0rpx;
+  height: 0rpx;
+}
+.letterId{
+  width: 150rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: white;
+  background-color: #E5BEC5;
+  border-radius: 15rpx;
+  padding-top: 15rpx;
+  position: relative;
+  left: -220rpx;
+  top: 30rpx;
+}
+.idInput{
+    border: 1px solid rgb(190, 185, 185);
+    width: 400rpx;
+    height: 60rpx;
+    position: relative;
+    left: 65rpx;
+    top: -38rpx;
+    border-radius: 25rpx;
+    border-radius: 10rpx;
+}
+.choice{
+  width: 700rpx;
+  height: 100rpx;
+  margin-top: 50rpx;
+  margin-left: 10rpx;
+}
+.choice view{
+  width: 150rpx;
+  height: 70rpx;
+  float: left;
+  margin-left: 60rpx;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.btn>button{
+  color: white;
+  margin-top: 20rpx;
+}
+#iconImg{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 5rpx;
+}
+#iconTime{
+  width: 55rpx;
+  height: 55rpx;
+  margin-top: 8rpx;
+}
+#iconTxt{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/timeLetter/timeLetter",
+    "pages/theme/theme",
+    "pages/sendLetterSuccess/sendLetterSuccess",
+    "pages/themeImg/themeImg",
+    "pages/themeTime/themeTime",
+    "pages/createTree/createTree",
+    "pages/changeMyData/changeMyData",
+    "pages/friends/friends",
+    "pages/goIntoTree/goIntoTree",
+    "pages/information/information",
+    "pages/leaveMessage/leaveMessage",
+    "pages/leaveMessageSuccess/leaveMessageSuccess",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/myFavorite/myFavorite",
+    "pages/myFocus/myFocus",
+    "pages/myLetter/myLetter",
+    "pages/myTree/myTree",
+    "pages/search/search",
+    "pages/stamp/stamp",
+    "pages/store/store",
+    "pages/themeText/themeText",
+    "pages/tree/tree",
+    "pages/exctheme/exctheme",
+    "pages/shouye/shouye",
+    "pages/aaaceshi/ceshi",
+    "pages/select/select",
+    "pages/myMessage/myMessage",
+    "pages/seeMessage/seeMessage",
+    "pages/publish/publish",
+    "pages/say/say",
+    "pages/InformationHome/informationHome",
+    "pages/myHole/myHole",
+    "pages/myHoleList/myHoleList"
+  ],
+
+  "networkTimeout": {
+    "request": 60000
+    },
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "信邮",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#E8AEAE",
+    "list": [
+      {
+        "pagePath": "pages/information/information",
+        "text": "圈子",
+        "iconPath": "./images/qz.png",
+        "selectedIconPath": "./images/qzz.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "./images/gr.png",
+        "selectedIconPath": "./images/grr.png"
+      }
+    ]
+  }
+}

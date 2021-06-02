@@ -1,0 +1,27 @@
+<!--pages/createTree/createTree.wxml-->
+<view class="container1">
+  <image src="../../images/3.2tree_create.jpg"></image>
+  <view>
+    <form bindsubmit="formSubmit">
+      <view class="treeId">幸运数字：</view>
+      <input type="text" bindblur="treeid" class="idInput" name="name" placeholder="添加你的幸运数字" />
+      <view class="treeName">树洞名字：</view>
+      <input type="text" maxlength="5" bindblur="treename" class="nameInput" name="name" placeholder="最大长度为5" />
+      <view class="treeContent">树洞内容：</view>
+      <textarea class="contentInput" name="content" bindblur="treecontent" placeholder="介绍一下你的树洞吧~"/>
+      <view class="treeNum">参与人数：</view>
+      <input type="number" class="numInput" name="num" bindblur="maxnumber" placeholder="请输入阿拉伯数字" />
+      <!-- 背景图 -->
+      <view class="treePic">背景图  ：</view>
+      <view class="backPic" bindtap="selectImg">点击选择</view> 
+
+      <!-- <image class="image" src="{{imgPath}}" mode='scaleToFill' bindtap="previewImg"></image> -->
+      
+
+    </form>
+   
+  </view>
+  <view class="set">
+    <button id="setUp" bindtap="jumpMyTree">创建树洞</button>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/themeImg/themeImg.wxml-->
+<view class="container">
+  <view class="advise">推荐</view>
+  <view class="more">更多 ></view>
+  <view class="images">
+    <block wx:for='{{imgdata}}' wx:for-item="item">
+      <view class="img">
+     <image bindtap="dianji" src="{{item.backimg}}" data-value="{{item.backimg}}" data-id="{{item.backimgid}}"></image>
+    </view>
+    </block>
+  </view>
+</view>

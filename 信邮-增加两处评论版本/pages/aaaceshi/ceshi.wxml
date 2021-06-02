@@ -1,0 +1,6 @@
+<!--pages/aaaceshi/ceshi.wxml-->
+<text>pages/aaaceshi/ceshi.wxml</text>
+<button bindtap="huoqu">获取access_token</button>
+<form bind:submit="testSubmit" report-submit="true">
+ <button formType="submit">发送模板消息</button>
+</form>

@@ -1,0 +1,100 @@
+/* pages/myMessage/myMessage.wxss */
+.head{
+  width: 90%;
+  height: 100rpx;
+  position: absolute;
+  top: 20rpx;
+}
+.head view{
+  width: 60%;
+  height: 100%;
+  float:left;
+  padding-left: 70rpx;
+  font-size: 50rpx;
+  padding-top: 25rpx;
+}
+.head image{
+  width: 13%;
+  height: 100%;
+  float: left;
+  position: relative;
+  left: 50rpx;
+  margin-top: 10rpx;
+}
+.content{
+  width: 87%;
+  height: 850rpx;
+  margin-top: -40rpx;
+  box-shadow: 0px 0px 7px #4e4e4e;
+  
+}
+.content1{
+  width: 95%;
+  height: 95%;
+  border: 1px solid black;
+  margin: 2.6%;
+}
+.content2{
+  width: 98%;
+  height: 98%;
+  border: 1px solid black;
+  margin: 0.6%;
+}
+.content2 view{
+  padding-left: 10rpx;
+}
+.centercontent{
+  width: 90%;
+  word-wrap: break-word;
+  margin-left: 5%;
+  height: 350rpx;
+}
+.udata{
+  width: 100%;
+  height: 100rpx;
+}
+.uimg{
+  width: 90rpx;
+  height: 90rpx;
+  float: left;
+  border-radius: 50rpx;
+  overflow: hidden;
+  margin-left: 3%;
+}
+.uname{
+  width: 60%;
+  height: 90rpx;
+  float: left;
+  margin-left: 8%;
+  padding-top: 15rpx;
+  font-size: 50rpx;
+}
+.txt{
+  width: 97%;
+  height: 240rpx;
+  position: relative;
+  top: 0rpx;
+  padding-left: 0;
+  overflow-y: scroll;
+  border-bottom: 1px solid #cf9797;
+  border-top: 1px solid #cf9797;
+}
+.answer{
+  width: 90%;
+  border-bottom: 1px solid #cf9797;
+  margin-left: 5%;
+  color: orangered;
+  margin-bottom: 15rpx;
+}
+.answercontent{
+  width: 90%;
+  margin-left: 5%;
+  border-bottom: 1px solid #cf9797;
+  color: orangered;
+  word-wrap: break-word;
+  height: 350rpx;
+}
+.answerbtn{
+  background-color: #cf9797;
+  margin-top: 30rpx;
+}

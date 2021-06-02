@@ -1,0 +1,68 @@
+<!--pages/shouye/shouye.wxml-->
+<!--index.wxml-->
+<view class="container">
+  <image src="../../images/logo.jpg" class="logo"></image>
+  <view class="info">欢迎来到信邮世界...</view>
+  <view class="all">
+    <!-- 第一个功能模块 -->
+  <view class="action" id="one" bindtap="goTime">
+    <view class="action-bac">
+      <view class="doc">
+        <view class="doc-title">时光信</view>
+        <view class="doc-p" id="p">跨越时间</view>
+        <view class="doc-p">与空间的诉说~</view>
+      </view>
+      <view class="img">
+        <image src="../../images/sgx.jpg"></image>
+      </view>
+    </view>
+    <!-- <image src="../../images/sgx.png"></image> -->
+  </view>
+  
+  <!-- 第二个功能模块 -->
+  <view class="action" id="two" bindtap="goTree">
+    <view class="action-bac">
+      <view class="doc">
+        <view class="doc-title">树洞</view>
+        <view class="doc-p" id="p">树洞</view>
+        <view class="doc-p">你最忠实的倾听者！</view>
+      </view>
+      <view class="img">
+        <image src="../../images/sd.jpg"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 第三个功能模块 -->
+  <view class="action" id="three" bindtap="goSelf">
+    <view class="action-bac">
+      <view class="doc">
+        <view class="doc-title">社区</view>
+        <view class="doc-p" id="p">那个</view>
+        <view class="doc-p">最懂你的灵魂使者~</view>
+      </view>
+      <view class="img">
+        <image src="../../images/xy.jpg"></image>
+      </view>
+    </view>
+  </view>
+ 
+
+
+  </view>
+
+
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+  <!-- <button bindtap="goMe">点击</button>
+  <button bindtap="goShouye">去首页</button> -->
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
+

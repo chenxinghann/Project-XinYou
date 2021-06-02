@@ -1,0 +1,5 @@
+<!--pages/leaveMessageSuccess/leaveMessageSuccess.wxml-->
+<view class="container">
+  <text>已将留言发送给洞主~</text>
+  <button id="return" bindtap="returnTree">返回树洞</button>
+</view>

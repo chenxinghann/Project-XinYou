@@ -1,0 +1,17 @@
+<!--pages/leaveMessage/leaveMessage.wxml-->
+<view class="container">
+  <image src="{{exchole.backimg}}" class="holebac"></image>
+  <view class="container1">
+    <view class="comments">
+      <view class="zhezhao"></view>
+      <text class="title">{{exchole.treename}}</text>
+      <view class="stampdata" bindtap="gostamp">
+        <image src="{{excstamp}}" class="stamp"></image>
+        <view class="changeStamp">点击更换邮票</view>
+      </view>
+
+      <textarea class="input" bindinput="content" placeholder="{{exchole.treecontent}}"></textarea>
+      <button id="submit" bindtap="showSubmit">提交</button>
+    </view>
+  </view>
+</view>

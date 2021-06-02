@@ -1,0 +1,24 @@
+<!--pages/story/story.wxml-->
+<view class="container">
+  <i>给你的小情绪找一个归属地吧~</i>
+  <!-- <button id="answer" bindtap="answer">树洞回复</button> -->
+</view>
+
+
+<view class="treehole">
+  
+  <block wx:for='{{treedata}}' wx:for-item="item">
+  <view class="hole">
+    <image class="userbac" src='{{item.backimg}}'></image>
+    <view class="touming"></view>
+    <image class="userimg" src="{{item.uimg}}"></image>
+    <view class="holename">{{item.treename}}</view>
+    <button id="in" bindtap="into" data-id="{{item.treeid}}">进入</button>
+  </view>
+  </block>
+
+  <view class="found" bindtap="foundTree">
+    <view class="plus">+</view>
+    <view class="set">创建树洞</view>
+  </view>
+</view>

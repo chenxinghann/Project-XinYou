@@ -1,0 +1,109 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+.logo{
+  width: 350rpx;
+  height: 350rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 0rpx;
+}
+.info{
+  font-size: 35rpx;
+  position: absolute;
+  top: 65rpx;
+  right: 45rpx;
+  font-family: "楷体";
+}
+
+
+.all{
+  position: absolute;
+  top: 240rpx;
+  left: 30rpx;
+  width: 700rpx;
+  height: 900rpx;
+}
+#one{
+  position: absolute;
+  top: 0rpx;
+  left: 70rpx;
+}
+#two{
+  position: absolute;
+  top: 300rpx;
+  left: 70rpx;
+}
+#three{
+  position: absolute;
+  top: 600rpx;
+  left: 70rpx;
+}
+
+.action{
+  width: 550rpx;
+  height: 250rpx;
+  background-color: #E3B1BA;
+  border-radius: 15px;
+}
+
+.action-bac{
+  background-color: white;
+  width: 95%;
+  height: 90%;
+  margin-top: 2%;
+  margin-left: 2%;
+  border-radius: 15px;
+}
+.doc{
+  width: 55%;
+}
+.doc-title{
+  font-size: 60rpx;
+  color:#E3B1BA;
+  margin-left: 75rpx;
+  padding-top: 10rpx;
+}
+.doc-p{
+  font-size: 28rpx;
+  color:#E3B1BA;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+#p{
+  padding-top: 10rpx;
+}
+.img{
+  width: 230rpx;
+  height: 230rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 8rpx;
+
+  border-radius: 50px 15px 15px 50px;
+  overflow: hidden;
+}
+.img image{
+  width: 230rpx;
+  height: 230rpx;
+}

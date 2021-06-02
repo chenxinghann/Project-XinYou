@@ -1,0 +1,48 @@
+/* pages/timeLetter/timeLetter.wxss */
+/* pages/timeLetter/timeLetter.wxss */
+.img{
+  margin-top: -200rpx;
+  width: 100%;
+}
+.img image{
+  width: 100%;
+}
+.doc{
+  width: 450rpx;
+  height: 400rpx;
+  margin-left: -200rpx;
+}
+.doc view{
+  margin-top: 15rpx;
+}
+#doc-one{
+  margin-top: 30rpx;
+}
+.title{
+  margin-right: -550rpx;
+  margin-top: -390rpx;
+  width: 100rpx;
+  height: 360rpx;
+  border-right: 1rpx solid black;
+}
+.title-child{
+  border-left: 1rpx solid black;
+  height: 290rpx;
+}
+.title-child span{
+  font-size: 60rpx;
+  margin-left: 18rpx;
+}
+.number{
+  margin-top: 50rpx;
+  font-size: 25rpx;
+}
+button{
+  margin-top: 40rpx;
+  background-color:#E5BEC5;
+  color: white;
+}
+.number>span{
+  color: red;
+  font-size: 30rpx;
+}

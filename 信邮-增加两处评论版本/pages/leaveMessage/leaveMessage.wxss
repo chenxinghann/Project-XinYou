@@ -1,0 +1,98 @@
+/* pages/leaveMessage/leaveMessage.wxss */
+
+  
+.container{
+  padding: 0;
+  margin: 0;
+}
+.holebac{
+  width: 100%;
+  height: 1250rpx;
+  margin: 0;
+}
+.container1{
+  padding: 100rpx 0 0 0;
+  position: absolute;
+  top: 0;
+}
+.comments{
+  height: 900rpx;
+  width: 630rpx;
+  border-radius: 80rpx;
+  
+}
+.zhezhao{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+}
+.comments text{
+  color: #757575;
+  display: block;
+  /* border: 1px solid black; */
+}
+.title{
+  color: #757575;
+  width: 60%;
+  font-size: 150%;
+  font-weight: 500;
+  /* text-align: center; */
+  position: relative;
+  top: -90%;
+  left: 10%;
+}
+.content{
+  color: #fff;
+  text-align: left;
+  width: 82%;
+  font-size: 80%;
+  margin: auto;
+  position: relative;
+  top: 6%;
+}
+.input{
+  margin: auto;
+  width: 80%;
+  height: 60%;
+  background-color: #fff;
+  position: absolute;
+  top: 300rpx;
+  left: 60rpx;
+  word-wrap: break-word;
+  border: 1px #BBBBBB solid;
+  opacity: 0.8;
+}
+.comments button{
+  position: relative;
+  top: 10%;
+}
+#submit{
+  border-radius: 200rpx;
+  background-color: #E3B1BA;
+  color: #fff;
+  margin-top: -100rpx;
+}
+.stampdata{
+  width: 25%;
+  height: 180rpx;
+  position: absolute;
+  left: 450rpx;
+  top: 125rpx;
+  
+}
+.stamp{
+  height: 120rpx;
+  width: 100rpx;
+  float: right;
+  margin-right: 20rpx;
+
+}
+.changeStamp{
+  color: blue;
+  font-size: 70%;
+  text-decoration: underline;
+  float: right;
+  margin-top: 10rpx;
+
+}

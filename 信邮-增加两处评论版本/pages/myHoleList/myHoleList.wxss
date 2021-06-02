@@ -1,0 +1,51 @@
+/* pages/myHoleList/myHoleList.wxss */
+.treehole{
+  width: 100%;
+}
+.hole{
+  width: 40%;
+  height: 400rpx;
+  margin-left: 6%;
+  margin-top: 5%;
+  float: left;
+}
+.userbac{
+  width: 100%;
+  height: 100%;
+}
+.touming{
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  position: relative;
+  top: -410rpx;
+}
+.userimg{
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  top: -700rpx;
+  left: 33%;
+  border-radius:100%;
+  /* padding-top: 30%; */
+}
+.holename{
+  font-size: small;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -680rpx;
+}
+#in{
+  width: 80%;
+  height: 50rpx;
+  padding-top: 10rpx;
+  position: relative;
+  top: -650rpx;
+  font-size: small;
+  border-radius: 98rpx;
+  background-color: rgb(224, 219, 219);
+}
+#in::after{
+  border-radius: 98rpx;
+}

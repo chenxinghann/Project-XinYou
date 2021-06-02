@@ -1,0 +1,53 @@
+<!--pages/mine/mine.wxml-->
+<view class="head">
+  <view class="h1">
+    <button size="mini" class="getUserInfo" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"
+      bindgetuserinfo="getUserInfo">获取</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="touxiang" src="{{user.uimg}}" />
+      <text class="name">{{user.uname}}</text>
+      <text class="arrow" bindtap="toChange">></text>
+    </block>
+  </view>
+  <view class="h2">
+    <text class="text1">关注1</text>
+    <text class="text2">被关注2</text>
+  </view>
+</view>
+
+<view class="b1">
+  <view class="b11" bindtap="toMyHoleList">
+    <image class="shudong" src="../../images/shu.png" />
+    <text>我的树洞</text>
+  </view>
+  <view class="b11" bindtap="toMyLetterList">
+    <image class="xinjian" src="../../images/xinxi.png" />
+    <text>我的信件</text>
+  </view>
+</view>
+<view class="b12">
+    <view class="bottom" bindtap="toStore">
+      <image class="jifen" src="../../images/jifen.png" />
+      <text>积分明细</text>
+    </view>
+    <view class="bottom" bindtap="toStore">
+      <image class="shangcheng" src="../../images/icon-test.png" />
+      <text>积分商城</text>
+    </view>
+    <view class="bottom">
+      <image class="bangzhu" src="../../images/bangzhu.png" />
+      <text>帮助反馈</text>
+    </view>
+    <view class="bottom" bindtap="gogogo">
+      <image class="tuandui" src="../../images/tuandui.png" />
+      <text>团队</text>
+    </view>
+    <view class="bottom">
+      <image class="kefu" src="../../images/kefu.png" />
+      <text>联系客服</text>
+    </view>
+    <view class="bottom">
+      <image class="shezhi" src="../../images/tubiao01.png" />
+      <text>设置</text>
+    </view>
+  </view>

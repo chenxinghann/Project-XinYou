@@ -1,0 +1,43 @@
+<!--pages/friends/friends.wxml-->
+<view class='container'>
+  <view class="search" bindtap="toSearch">
+    <view class="df search_arr">
+      <icon class="searchcion" size='16' type='search'></icon>
+      <input class="sousuo" disabled placeholder="搜索" bindtap='search' />
+    </view>
+  </view>
+  <image src="../../images/添加好友.png" class="addF"></image>
+</view>
+
+<!-- 使用 wx:for 控制属性绑定一个数组，即可使用数组中各项的数据重复渲染该组件。
+使用 wx:for-item 可以指定数组当前元素的变量名，
+使用 wx:for-index 可以指定数组当前下标的变量名： -->
+<block wx:for="{{groups}}" wx:key="id" wx:for-index="idxgrp" wx:for-item="groups">
+  <view class="list-view-groups" id="{{groups.id}}" bindtap="groupclick">
+    <view class="list-view-image">
+      <block wx:if="{{groups.hidden}}">
+        <image class="list-image" id="image{{groups.id}}" src="../../images/Arrow-Right-Rounded.png"></image>
+      </block>
+      <block wx:else>
+        <image class="list-image" id="image{{groups.id}}" src="../../images/Arrow-Down-Rounded.png"></image>
+      </block>
+    </view>
+
+    <view class="list-view-text">
+      <text class="list-text" id="name{{groups.id}}">{{groups.name}}</text>
+    </view>
+    <view class="list-view-count">
+      <text class="list-text-count" id="count{{groups.id}}">({{groups.count}})</text>
+    </view>
+  </view>
+  <view class="list-view-friends" hidden="{{groups.hidden}}" id="friendlist{{groups.id}}">
+    <block wx:for="{{friends}}" wx:key="id" wx:for-index="idxfrd" wx:for-item="friends">
+      <block wx:if="{{friends.group==groups.id}}">
+        <view class="list-view-friend" id="{{groups.id}}{{friends.id}}" bindtap="toChat">
+          <image class="list-friend-image" src="{{friends.photo}}"></image>
+          <text class="list-friend-text ">{{friends.name}}</text>
+        </view>
+      </block>
+    </block>
+  </view>
+</block>

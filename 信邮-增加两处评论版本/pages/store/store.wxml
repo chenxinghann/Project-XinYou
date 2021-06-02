@@ -1,0 +1,28 @@
+<!--pages/store/store.wxml-->
+<view class="container">
+  <view class="topbar">
+    <view class="head hl">
+      <navigator hover-class="navigator-hover">主题</navigator>
+    </view>
+    <view class="head h2">
+      <navigator url="../themeImg/themeImg" hover-class="navigator-hover">背景</navigator>
+    </view>
+    <view class="head h3">
+      <navigator url="../themeText/themeText" hover-class="navigator-hover">文字</navigator>
+    </view>
+    <view class="head hr">
+      <navigator url="../stamp/stamp" hover-class="navigator-hover">邮票</navigator>
+    </view>
+  </view>
+  <view class="lettertheme">
+    <block wx:for='{{lettertheme}}' wx:for-item="item">
+      <view class="img" bindtap="choosetheme" data-themeid="{{item.themeid}}" data-backimg="{{item.backimg}}"
+        data-themecolor="{{item.themecolor}}">
+        <image src="{{item.backimg}}"></image>
+        <view class="themename">免费</view>
+      </view>
+    </block>
+  </view>
+
+
+</view>

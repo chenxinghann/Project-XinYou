@@ -1,0 +1,30 @@
+<!--pages/InformationHome/informationHome.wxml-->
+<view class="container">
+  <!-- <view class="bac"></view>
+  <view class="touming"></view> -->
+  <view class="head">
+    <image src="{{excmean.uimg}}" class="touxiang"></image>
+  </view>
+  <view class="means">
+    <view class="mean" id="one">
+      <view class="title">昵称:</view>
+      <view class="content">{{excmean.uname}}</view>
+    </view>
+    <view class="mean">
+      <view class="title">年龄:</view>
+      <view class="content">{{excmean.age}}</view>
+    </view>
+    <view class="mean">
+      <view class="title">地区:</view>
+      <view class="content">{{excmean.area}}</view>
+    </view>
+    <view class="mean">
+      <view class="title">职业:</view>
+      <view class="content">{{excmean.job}}</view>
+    </view>
+    <view class="mean">
+      <view class="title">兴趣爱好:</view>
+      <view id="int">{{excmean.interest}}</view>
+    </view>
+  </view>
+</view>

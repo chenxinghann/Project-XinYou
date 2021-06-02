@@ -1,0 +1,94 @@
+/* pages/createTree/createTree.wxss */
+.container1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+image{
+  width: 330rpx;
+  height: 330rpx;
+}
+.treeId{
+  margin-left: 7%;
+  float: left;
+}
+.treeName{
+  margin-top: 3%;
+  margin-left: 7%;
+  float: left;
+}
+.idInput{
+  width: 60%;
+  border: 1rpx solid #E3B1BA;
+  border-radius: 20rpx;
+  float: left;
+}
+.nameInput{
+  margin-top: 3%;
+  width: 60%;
+  border: 1rpx solid #E3B1BA;
+  border-radius: 20rpx;
+  float: left;
+}
+.treeContent{
+  margin-top: 3%;
+  margin-left: 7%;
+  float: left;
+}
+.contentInput{
+  margin-top: 3%;
+  width: 60%;
+  height: 330rpx;
+  border: 1rpx solid #E3B1BA;
+  border-radius: 20rpx;
+  float: left;
+}
+.treeNum{
+  margin-top: 3%;
+  margin-left: 7%;
+  float: left;
+}
+.numInput{
+  margin-top: 3%;
+  width: 60%;
+  border: 1rpx solid #E3B1BA;
+  border-radius: 20rpx;
+  float: left;
+}
+.treePic{
+  margin-top: 3%;
+  margin-left: 7%;
+  float: left;
+
+}
+.backPic{
+  margin-top: 3%;
+  margin-left: 26rpx;
+  width: 20%;
+  height: 50rpx;
+  background-color: #DFE5EC;
+  border-radius: 20rpx;
+  float: left;
+  font-size: 30rpx; 
+  color: rgb(197, 197, 201);
+  text-align: center;
+  border: 1px solid #E3B1BA;
+  padding-top: 5rpx;
+}
+
+
+
+.set{
+  width: 100%;
+  margin-top: 30rpx;
+}
+#setUp{
+  /* position: relative;
+  top: 50rpx; */
+  background-color: #E3B1BA;
+  border-radius: 20rpx;
+  color: #fff;
+}

@@ -1,0 +1,39 @@
+<!--pages/say/say.wxml-->
+<view class="container">
+  <view class="circle">
+    <view class="head">
+      <image src="{{excpublish.uimg}}" class="uimg"></image>
+      <view>{{excpublish.uname}}</view>
+    </view>
+    <view class="content">
+      <view class="circletxt">{{excpublish.publishcontent}}</view>
+      <view class="circleimg">
+        <image src="{{excpublish.publishimg}}"></image>
+      </view>
+      <view class="pinglun" bindtap="gosay">
+        <image src="../../images/评论.png"></image>
+        <span>评论</span>
+      </view>
+    </view>
+    <view class="saycenter">
+      <!-- ////////////////// -->
+      <block wx:for='{{publishlist}}' wx:for-item="item">
+        <view class="say">
+          <view class="sayhead">
+            <image src="{{item.uimg}}"></image>
+            <view>{{item.uname}}</view>
+          </view>
+          <view class="saytxt">{{item.reviewcontent}}</view>
+        </view>
+      </block>
+      <view class="div"></view>
+    </view>
+ 
+  </view>
+  <view class="gosay">
+    <input class="sayy" type="text" bindinput="talk" value="{{talk}}"/>
+    <view class="sendsay" bindtap="sendyes">发送</view>
+  </view>
+
+</view>
+

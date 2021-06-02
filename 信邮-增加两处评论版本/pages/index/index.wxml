@@ -1,0 +1,20 @@
+<view>
+  <image src="../../images/logo.jpg" class="logo"></image>
+  <view class="txt">快来点击开启属于你的时光之旅~</view>
+</view>
+<view class="container">
+  <view class="userinfo">
+  </view>
+      <view class="yes">
+        <block wx:if="{{hasUserInfo == false}}">
+          <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="btn">微信授权</button>
+        </block>
+        <block wx:elif="{{ hasUserInfo == true}}">
+          <button bindtap="login" class="into">点击进入</button>
+        </block>
+      </view>
+      <!-- <button bindtap="kk">123</button> -->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<!--pages/myFocus/myFocus.wxml-->
+<view class="container">
+  <view class="images">
+    <view class="title">我喜欢的树洞如下：</view>
+    <block wx:for='{{liketrees}}' wx:for-item="item">
+      <view class="hole" bindtap="into" data-id="{{item.treeid}}">
+        <image class="userbac" src='{{item.backimg}}'></image>
+        <view class="touming"></view>
+        <image class="userimg" src="{{item.uimg}}"></image>
+        <view class="holename">{{item.treename}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+

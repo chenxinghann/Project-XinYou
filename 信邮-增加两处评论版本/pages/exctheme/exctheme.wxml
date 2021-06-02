@@ -1,0 +1,38 @@
+<!--pages/exctheme/exctheme.wxml-->
+<!--pages/theme/theme.wxml-->
+<view class="container">
+  <view class="topbar">
+    <view class="themeOk" bindtap="usetheme" style="background-color:{{seetheme.themecolor}}">使用</view>
+    <view bindtap="toCollect">
+        <block wx:if="{{Collect == false}}">
+          <image src="../../images/xxq.png" class="shoucang" style="background-color:{{seetheme.themecolor}}"></image>
+        </block>
+        <block wx:elif="{{Collect == true}}">
+          <image src="../../images/xxh.png" class="shoucang" style="background-color:{{seetheme.themecolor}}"></image>
+        </block>
+      </view>
+    <!-- <image class="shoucang" src="../../images/themeshoucang.png" style="background-color:{{seetheme.themecolor}}"></image> -->
+  </view>
+  <view class="content" style="border:2px solid {{seetheme.themecolor}}">
+    <image src="{{seetheme.backimg}}"></image>
+    <textarea placeholder="对未来的我说：" class="text" bindinput="txtarea" style="color:{{lettertcolor}} font-famliy:{{lettertstyle}}"></textarea>
+    <view class="corner" style='border-right-color:{{seetheme.themecolor}}'></view>
+    <view class="cover"></view>
+  </view>
+  <view class="choice"> 
+    <view bindtap="goBacimg" style="background-color:{{seetheme.themecolor}}">
+      <image id="iconImg" src="../../images/iconImg.png"></image>
+    </view>
+    <view bindtap="goTime" style="background-color:{{seetheme.themecolor}}">
+      <image id="iconTime" src="../../images/iconTime.png"></image>
+    </view>
+    <view bindtap="goTxt" style="background-color:{{seetheme.themecolor}}">
+      <image id="iconTxt" src="../../images/iconTxt.png"></image>
+    </view>
+  </view>
+  <view class="btn">
+    <button bindtap="goSendletter" style="background-color:{{seetheme.themecolor}}">放入时光胶囊</button>
+  </view>
+
+</view>
+

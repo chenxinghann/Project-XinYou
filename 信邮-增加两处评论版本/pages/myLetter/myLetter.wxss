@@ -1,0 +1,70 @@
+/* pages/myLetter/myLetter.wxss */
+page{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+.letterview{
+  position: absolute;
+  top: 0;
+}
+.letter{
+  width: 600rpx;
+  height: 700rpx;
+  background-color: white;
+  border-radius: 30rpx;
+  box-shadow: 0 0 7px 2px grey; 
+  margin-top: 60rpx;
+
+}
+.backimg{
+  width: 100%;
+  height: 100%;
+}
+.line{
+  width: 95%;
+  height: 95%;
+  position: relative;
+  top: 2.2%;
+  left: 2.2%;
+  border: 1.5px dashed grey;
+  border-radius: 10rpx;
+}
+.zhezhao{
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(89, 159, 187); */
+  background-color: black;
+  opacity: 0.2;
+  position: relative;
+  top: -670rpx;
+}
+.content{
+  width: 100%;
+  height: 80%;
+  box-sizing: border-box;
+  padding-top:60rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  position: relative;
+  top: -1340rpx;
+  overflow-y: scroll;
+}
+.name{
+  width: 75%;
+  margin-left: 25%;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  text-align: left;
+  position: relative;
+  top: -1370rpx;
+}
+.date{
+  width: 75%;
+  margin-left: 25%;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+  top: -1370rpx;
+}

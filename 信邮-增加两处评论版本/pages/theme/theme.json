@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "navigationBarTitleText": "时光信",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#E5BEC5"
+}

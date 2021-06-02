@@ -1,0 +1,12 @@
+<!--pages/stamp/stamp.wxml-->
+<view class="container">
+  <view class="advise">推荐</view>
+  <view class="more">更多 ></view>
+  <view class="images">
+    <block wx:for='{{stamp}}' wx:for-item="item">
+      <view class="img">
+     <image bindtap="dianji" src="{{item.stamp}}" data-value="{{item.stamp}}"></image>
+    </view>
+    </block>
+  </view>
+</view>

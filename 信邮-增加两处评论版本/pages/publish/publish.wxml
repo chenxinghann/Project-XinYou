@@ -1,0 +1,23 @@
+<!--pages/publish/publish.wxml-->
+<view class="container">
+  <view class="publish">
+    <view class="head">
+      <image src="{{uimg}}" class="uimg"></image> 
+      <view class="name">{{uname}}</view>
+    </view>
+    <view class="publishimg" bindtap="getimg">
+        <image src="../../images/dtt.png"></image>
+        <view>图片</view>
+      </view>
+    <view class="content">
+      <view class="centerp">
+        <textarea placeholder="分享今日~" bindinput="getvalue"></textarea>
+        <view class="myimg">
+          <image src="{{publishimg}}"></image>
+        </view>
+      </view>
+    </view>
+    <button class="btn" bindtap="gopbulish">发布</button>
+  </view>
+
+</view>

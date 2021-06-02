@@ -1,0 +1,19 @@
+<!--pages/themeTime/themeTime.wxml-->
+<view class="container">
+  <view class="section">
+    <view class="picker" id="picker1">日历</view>
+    <picker mode="date" value="{{date}}" start="{{date.getDate()}}" end="2050-09-01" bindchange="bindDateChange"> 
+      <input class="day" type="text" value="{{date}}" auto-focus placeholder="点击选择日期"/>
+    </picker>
+    <view class="picker" id="picker2">时间</view>
+    <picker mode="time" value="{{time}}" start="16:00" end="23:59" bindchange="bindTimeChange"> 
+      <input class="day-time" type="text" value="{{time}}" placeholder="点击选择时间"/>
+    </picker>
+  </view>
+  <view class="save">
+    <button bindtap="goSave" value="{{time}}">保存</button> 
+  </view>
+</view>
+
+
+ 

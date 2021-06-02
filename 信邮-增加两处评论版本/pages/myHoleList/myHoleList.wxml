@@ -1,0 +1,13 @@
+<View class="treehole">
+  <block wx:for='{{treedata}}' wx:for-item="item" wx:key="{{treedata.treeid}}">
+    <View wx:if="{{item.uid===uid}}">
+      <View class="hole">
+        <image class="userbac" src='{{item.backimg}}'></image>
+        <View class="touming"></View>
+        <Image class="userimg" src="{{item.uimg}}"></Image>
+        <View class="holename">{{item.treename}}</View>
+        <button id="in" bindtap="into" data-id="{{item.treeid}}">进入</button>
+      </View>
+    </View>
+  </block>
+</View>

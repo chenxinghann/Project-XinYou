@@ -1,0 +1,33 @@
+<!--pages/information/information.wxml-->
+<view class="all">
+  <view class="home">
+    <image src="../../images/fhhome.png" bindtap="gohome"></image>
+  </view>
+  <view class="goto" bindtap="goout">
+    <image src="../../images/加号.png"></image>
+  </view>
+
+  <!-- 列表循环 -->
+  <block wx:for='{{publishlist}}' wx:for-item="item">
+    <view class="circle">
+      <view class="head">
+        <image src="{{item.uimg}}" class="uimg"></image>
+        <view>{{item.uname}}</view>
+      </view>
+      <view class="content">
+        <view class="circletxt">{{item.publishcontent}}</view>
+        <view class="circleimg">
+          <image src="{{item.publishimg}}"></image>
+          <view class="time">{{item.time}}</view>
+        </view>
+        <view class="bottom">
+          
+          <view class="pinglun" bindtap="gosay" data-value="{{item}}">
+            <image src="../../images/评论.png"></image>
+            <span>评论</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

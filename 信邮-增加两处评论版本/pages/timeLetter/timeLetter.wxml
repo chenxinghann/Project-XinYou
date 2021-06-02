@@ -1,0 +1,23 @@
+<!--pages/timeLetter/timeLetter.wxml-->
+<!--pages/timeLetter/timeLetter.wxml-->
+<view class="container">
+  <view class="img">
+    <image src="../../images/time_letter.jpg"></image>
+  </view>
+  <view class="doc">
+    <view id="doc-one">假如，时光来到未来，</view>
+    <view>你最想给未来的自己说些什么？</view>
+    <view>这是一封寄望未来的信，</view>
+    <view>希望</view>
+    <view>这封信可以留下你的记忆~</view>
+  </view>
+  <view class="title">
+    <view class="title-child">
+      <span>时</span>
+      <span>光</span>
+      <span>信</span>
+    </view>   
+  </view>
+  <button bindtap="goTheme">开始写信</button>
+  <view class="number">已有<span>123055</span>封信发往未来~</view>
+</view>

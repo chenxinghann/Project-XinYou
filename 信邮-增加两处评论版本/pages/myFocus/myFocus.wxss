@@ -1,0 +1,47 @@
+/* pages/myFocus/myFocus.wxss */
+/* pages/themeImg/themeImg.wxss */
+.images{
+  width: 100%;
+  margin-top: -150rpx;
+}
+.title{
+  margin-left: 40rpx;
+}
+.hole{
+
+  width: 40%;
+  height: 400rpx;
+  margin-left: 6%;
+  margin-top: 5%;
+  float: left;
+}
+.userbac{
+  width: 100%;
+  height: 100%;
+
+}
+.touming{
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  position: relative;
+  top: -410rpx;
+}
+.userimg{
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  top: -700rpx;
+  left: 33%;
+  border-radius:100%;
+
+
+  /* padding-top: 30%; */
+}
+.holename{
+  font-size: 35rpx;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: -660rpx;
+}
