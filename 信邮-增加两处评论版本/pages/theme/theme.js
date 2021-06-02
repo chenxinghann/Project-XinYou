@@ -215,8 +215,10 @@ Page({
       tmplIds: ['hw4n2WpDAlu3qDU9jQTLS-FxRvHImjQHsb_t4Fl-FhA'],//*里面填申请的id
       success(res) {
         console.log(res)
-        var appid = "wx56840c09ca9a9e39"//appid
-        var secret = "e7208fdd0bc299bce687fe7b6ee15c8a"//密钥//密钥无法查看，只能重置
+        // var appid = "wx56840c09ca9a9e39"//appid
+        // var secret = "e7208fdd0bc299bce687fe7b6ee15c8a"//密钥//密钥无法查看，只能重置
+        var appid= 'wx3155f27af04b2337'
+        var secret= '45eaaeaea4517824f749b4f728aa674a'
         //var that = this
         wx.request({
           url: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' + appid + '&secret=' + secret,
