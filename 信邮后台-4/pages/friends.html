@@ -288,6 +288,20 @@
 		})
 		showPublish();
 	}
+	function resolvingDate(date) {
+		//date是传入的时间
+		let d = new Date(date);
+
+		let month = (d.getMonth() + 1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1);
+		let day = d.getDate() < 10 ? '0' + d.getDate() : d.getDate();
+		let hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
+		let min = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+		let sec = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
+
+		let times = d.getFullYear() + '-' + month + '-' + day + ' ' + hours + ':' + min + ':' + sec;
+
+		return times
+	}
 	function showPublish() {
 		let html = ''
 		for (let i = 0; i < publishs.length; i++) {
@@ -296,7 +310,7 @@
         <tr>
           <td>${publishs[i].publishId}</td>
           <td>${publishs[i].uId}</td>
-          <td>${publishs[i].Time}</td>
+          <td>${resolvingDate(publishs[i].Time)}</td>
           <td>${publishs[i].publishContent}</td>
           <td><a href=${publishs[i].publishImg}><img style={{width:30px;height:30px}} src=${publishs[i].publishImg}/></a></td>
           <td><button onclick="del(${publishs[i].uId},${publishs[i].publishId}) ">删除</button></td>

@@ -1,7 +1,6 @@
 'use strict'
 
 class userList {
-
   constructor () {
     this.param = '/'
   }
@@ -13,7 +12,6 @@ class userList {
 
     c.send(html)
   }
-
 }
 
 module.exports = userList

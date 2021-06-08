@@ -1,0 +1,17 @@
+<!--pages/myMessage/myMessage.wxml-->
+<view class="container">
+  <view class="head">
+    <view>{{exchole.treename}}</view>
+    <image src="{{excmessage.stamp}}"></image>
+  </view>
+  <view class="content">
+    <view class="content1">
+      <view class="content2">
+      <!--  wx:if="{{uid===excmessage.messid}}" -->
+        <view class="centercontent">{{excmessage.messcontent}}</view>
+        <view class="answer">洞主的回复内容：</view>
+        <view class="answercontent">{{giveanswer.answer==null?"洞主很忙，还未回复":giveanswer.answer}}</view>
+      </view>
+    </view>
+  </view>
+</view>

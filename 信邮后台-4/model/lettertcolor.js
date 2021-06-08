@@ -10,7 +10,7 @@ class lettertcolor{
 
   async get () {
     try{
-      let sql='select * from lettertcolor'
+      let sql='select * from lettertcolor order by lettertcolorid'
       let r=await this.mdb.query(sql)
       let result=r['rows']
       if(result.rowCount<=0){

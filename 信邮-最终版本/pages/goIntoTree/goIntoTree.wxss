@@ -1,0 +1,251 @@
+/* pages/goIntoTree/goIntoTree.wxss */
+
+.container{
+  padding: 0;
+  margin: 0;
+}
+.holebac{
+  width: 100%;
+  height: 1250rpx;
+  margin: 0;
+}
+/* 投档记录 */
+.pick-header{
+  /* box-shadow: 3px 0 0 #4e4e4e; */
+  color: #fff;
+  z-index: 60;
+  position: absolute;
+  top: 0rpx;
+  left: 10%;
+  height: 50rpx;
+  width: 80%;
+  background-color: #E3B1BA;
+  padding-top: 10rpx;
+  text-align: center;
+  opacity: 0.80;
+}
+.pick-container {
+  /* box-shadow: 3px 3px 3px #4e4e4e; */
+  width: 80%;
+  height: 500rpx;
+  background-color:#E3B1BA;
+  position : absolute;
+  left: 10%;
+  z-index: 50;
+  top: -440rpx;
+  /* border-radius: 0 0 70rpx 70rpx; */
+  overflow-y: scroll;
+}
+.toudang{
+  margin-top: 10rpx;
+  width: 94%;
+  margin-left: 2%;
+  height: 90rpx;
+  border: 1px solid whitesmoke;
+  align-items: center;
+}
+.uname{
+  width: 20%;
+  position: relative;
+  top: 20rpx;
+  color: blanchedalmond;
+  /* border: 1px solid whitesmoke; */
+}
+.stampp{
+  width: 80rpx;
+  height: 100%;
+  /* position: relative;
+  right: 0%; */
+}
+.con{
+  position: relative;
+  top: -20rpx;
+}
+.txt{
+  margin: 0;
+  border: 1px solid rebeccapurple;
+  position: relative;
+  top: -30rpx;
+  left: 150rpx;
+  height: 80%;
+  width: 70%;
+  /* overflow: hidden; */
+  font-size: 27rpx;
+}
+
+
+
+
+
+/*筛选项隐藏显示动start*/
+@keyframes slidown {
+  from {
+  transform: translateY(10%);}
+  to {
+  transform: translateY(100%);}
+  }
+  .slidown {
+  display : block;
+  animation: slidown 0.1s ease-in both;}
+  @keyframes slidup {
+    from {
+  transform: translateY (100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+  }
+  .slidup {
+  display : block;
+  animation: slidup 0.2s ease-in both;
+}
+  .shadow {
+  width: 100%;
+  background-color: rgba(1,1，1，0.2);
+  position: absolute;
+  z-index: 40;
+  top: 72rpx;}
+
+/* 以上是投档记录 */
+
+
+.container1 {
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 90%;
+  height: 1000rpx;
+  border-radius: 60rpx;
+  background-color: transparent;
+  margin: auto;
+  margin-top: 100rpx;
+  /* border: black solid 1px; */
+}
+.zhezhao{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.80;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0; 
+  padding: 0;
+}
+.msg image{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 100%;
+}
+.msg{
+  height: 85%;
+  width: 80%;
+  position: absolute;
+  top: 30rpx;
+  /* border: 1rpx solid #BBBBBB; */
+}
+.user{
+  /* border: 1rpx solid #000; */
+  margin: auto;
+}
+.id{
+  color: #757575;
+  font-weight: 500;
+  font-size: large;
+  position: relative;
+  top: -40rpx;
+  left: 20rpx;
+}
+.article{
+  background-color: #fff;
+  width: 100%;
+  height: 700rpx;
+  border: 1px solid #BBBBBB;
+  margin: auto;
+  opacity: 0.80;
+}
+
+.content{
+  font-size: 1rem;
+  /* border: 1px solid black; */
+}
+.logo{
+  margin: auto;
+  position: relative;
+  bottom: 10rpx;
+  border: 1px solid #BBBBBB;
+  height: 70rpx;
+  width: 545rpx;
+  margin-top: 30rpx;
+}
+.logo image{
+  width: 55rpx;
+  height: 55rpx;
+  position: relative;
+  padding-top: 5rpx;
+}
+/* .comment{
+  float: left;
+  position: relative;
+  left: 10%;
+} */
+.comment image{
+  position: relative;
+  float: left;
+  left: 15%;
+}
+.separate{
+  float: left;
+  position: relative;
+  left: 27%;
+  font-size: x-large;
+}
+/* .download{
+  float: left;
+  position: relative;
+  left: 40%;
+} */
+.download image{
+  float: left;
+  position: relative;
+  left: 40%;
+}
+.shanghua{
+  position: fixed;
+  bottom: 0;
+}
+.zuohua{
+  position: relative;
+  left: 50%;
+  top: -50%;
+}
+.zuohua image{
+  height: 100rpx;
+  width: 100rpx;
+}
+.comment text{
+  font-size: small;
+  color: #EA8A8A;
+  float: left;
+  position: relative;
+  left: 15%;
+  padding-top: 10rpx;
+}
+.separate text{
+  color: #BBBBBB;
+}
+.download text{
+  font-size: small;
+  color: #EA8A8A;
+  float: left;
+  position: relative;
+  left: 40%;
+  padding-top: 10rpx;
+}

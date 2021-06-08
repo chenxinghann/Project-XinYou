@@ -1,0 +1,24 @@
+<!--pages/myMessage/myMessage.wxml-->
+<view class="container">
+  <view class="head">
+    <view>{{exchole.treename}}</view>
+    <image src="{{excontent.stamp}}"></image>
+  </view>
+  <view class="content">
+    <view class="content1">
+      <view class="content2">
+        <view class="centercontent">
+          <view class="udata">
+            <image class="uimg" src="{{excontent.uimg}}"></image>
+            <view class="uname">{{excontent.uname}}</view>
+          </view>
+          <view class="txt">{{excontent.messcontent}}</view>       
+        </view>
+        <view class="answer">树洞回复：</view>
+        <textarea class="answercontent" placeholder="快来回复他吧~" bindinput="answertxt"></textarea>
+   
+      </view>
+    </view>
+  </view>
+  <button class="answerbtn" bindtap="send">提交</button>
+</view>

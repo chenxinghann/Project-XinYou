@@ -1,0 +1,126 @@
+/* pages/themeText/themeText.wxss */
+page{
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+.container {
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30rpx;
+  padding-bottom: 20rpx;
+}
+.head {
+  width: 240rpx;
+  height: 60rpx;
+  background-color: #E5BEC5;
+  border-right: 1px solid #fff;
+  display: flex;flex-direction: row;
+  justify-content: space-around;
+  line-height: 60rpx;
+}
+.head:hover {
+  color: white;
+}
+.hl{
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+.hr{
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.swiper{
+  height: 1000rpx;
+}
+.b{
+  margin-top: 10%;
+  width: 30%;
+  float: left;
+}
+.c{
+  background-color: #fff;
+}
+.fontFmily{
+  margin-top: 10rpx;
+  height: 75rpx;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  line-height: 75rpx;
+}
+.fontFmily:hover{
+  color: #E5BEC5;
+}
+.tab-item{
+  color: #000;
+}
+.on{
+  color: #fff;
+}
+.foreview{
+  /* margin-left: 30%; */
+  margin-top: 10%;
+  height: 800rpx;
+}
+text{
+  margin-left: 5%;
+}
+.f{
+  display: flex;
+  flex-direction: column;
+  align-items: center;/*垂直居中*/
+  justify-content:center; /*水平居中*/
+  background-color: white;
+  height: 550rpx;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+.d{
+  font-size: 2.5rem;
+  /* margin-left: 60rpx; */
+}
+.btn1{
+  border-radius: 100rpx;
+  background-color: #E3B1BA;
+  position: fixed;
+  bottom: 0rpx;
+  left: 45%;
+  color: #fff;
+}
+
+.p2{
+  /* height: 850rpx; */
+  /* border: green 2px solid; */
+  top: 10%;
+  height: 100%;
+}
+.col{
+  width: 20%;
+  height: 8%;
+  margin-top: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col text{
+  color: #FAFAFA;
+}
+.cp{
+  width: 60%;
+  height: 600rpx;
+  /* border: goldenrod 1px solid; */
+  position: fixed;
+  top: 10%;
+  left: 30%;
+}
+
+.btn2{
+  border-radius: 100rpx;
+  background-color: #E3B1BA;
+  position: fixed;
+  bottom: 0rpx;
+  /* bottom: 0rpx; */
+  left: 37%;
+  color: #fff;
+}

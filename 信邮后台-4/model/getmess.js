@@ -8,6 +8,7 @@ class getmess {
 
   async get(c) {
     try {
+      // let sql = 'select * from tree_message'
       let sql = 'select * from tree_message'
       let r = await this.mdb.query(sql)
       let result = r['rows']

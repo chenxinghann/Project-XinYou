@@ -63,7 +63,9 @@
 							<div>
 								<span>--信友</span>
 								<ul>
-									<li><a href="/friends">信友</a></li>
+									<li><a href="/tree">树洞表</a></li>
+									<li><a href="/get">树洞留言表</a></li>
+									<li><a href="/post">洞主回复表</a></li>
 								</ul>
 							</div>
 						</div>
@@ -85,6 +87,7 @@
 										<th>寄回时间</th>
 										<th>字体id</th>
 										<th>背景图</th>
+										<th>主题id</th>
 										<th>内容</th>
 										<th>操作</th>
 									</tr>
@@ -104,9 +107,10 @@
 									<input type="number" id="letterId" />时光信id<br />
 									<input type="number" id="uId" />用户id<br />
 									<!-- <input type="text" id="letterName" />时光信名字<br /> -->
-									<input type="datetime-local" id="letterTime" />寄出时间<br />
+									<input type="datetime-local" id="letterTime" />寄回时间<br />
 									<input type="number" id="fontId" />字体id<br />
 									<input type="number" id="backimgId" />背景图id<br />
+									<input type="number" id="themeId" />主题id<br />
 									<input type="text" id="lContent" />内容<br />
 									<button onclick="add()">确定</button>
 								</form>
@@ -259,6 +263,7 @@
 		var letterTime = document.getElementById('letterTime')
 		var fontId = document.getElementById('fontId')
 		var backimgId = document.getElementById('backimgId')
+		var themeId = document.getElementById('themeId')
 		var lContent = document.getElementById('lContent')
 		data.letterid = letterId.value;
 		data.uid = uId.value;
@@ -266,7 +271,8 @@
 		data.lettertime = letterTime.value;
 		data.fontid = fontId.value;
 		data.backimgid = backimgId.value;
-		data.lcontent = lContent.value;
+		data.themeid = themeId.value;
+		data.content = lContent.value;
 		fetch(url, {
 			method: 'POST',
 			mode: "no-cors",
@@ -284,7 +290,7 @@
 			return response.json();
 		})
 		.then(function (myJson) {
-			// console.log(myJson);
+			console.log(myJson);
 			getTimeLetter(myJson);
 		})
 		.catch(err => {
@@ -300,10 +306,25 @@
 				letterTime: item.lettertime,
 				fontId: item.fontid,
 				backimgId: item.backimgid,
-				lContent: item.lcontent,
+				themeId: item.themeid,
+				lContent: item.content,
 			}
 		})
 		showTimeLetter();
+	}
+	function resolvingDate(date) {
+		//date是传入的时间
+		let d = new Date(date);
+
+		let month = (d.getMonth() + 1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1);
+		let day = d.getDate() < 10 ? '0' + d.getDate() : d.getDate();
+		let hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
+		let min = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+		let sec = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
+
+		let times = d.getFullYear() + '-' + month + '-' + day + ' ' + hours + ':' + min + ':' + sec;
+
+		return times
 	}
 	function showTimeLetter() {
 		let html = ''
@@ -312,9 +333,10 @@
           <tr>
             <td>${timeletters[i].letterId}</td>
             <td>${timeletters[i].uId}</td>
-            <td>${timeletters[i].letterTime}</td>
+            <td>${resolvingDate(timeletters[i].letterTime)}</td>
             <td>${timeletters[i].fontId}</td>
             <td><a href="http://10.7.86.184:1111/static/img/backimg/${timeletters[i].backimgId}.jpg"><img style="width:50px;height:70px" src="http://10.7.86.184:1111/static/img/backimg/${timeletters[i].backimgId}.jpg"><im/></a></td>
+						<td>${timeletters[i].themeId}</td>
 						<td>${timeletters[i].lContent}</td>
 						<td><button onclick="del(${timeletters[i].uId},${timeletters[i].letterId}) ">删除</button></td>
           </tr>

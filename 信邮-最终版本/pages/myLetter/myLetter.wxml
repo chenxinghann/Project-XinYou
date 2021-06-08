@@ -1,0 +1,34 @@
+<!--pages/myLetter/myLetter.wxml-->
+<view class="container">
+  <view class="letterview">
+    <block wx:for='{{letterdata}}' wx:for-item="item" wx:key="letterid">
+      <view class="letter" style="background-color:{{item.themecolor}}" wx:if="{{item.uid === uid}}">
+        <view class="line">
+          <image src="{{item.backimg}}" class="backimg"></image>
+          <view class="zhezhao"></view>
+          <view class="content" style="color:{{item.lettertcolor}};font-family:'{{item.font}}'">{{item.content}}
+          </view>
+          <view class="name" style="font-family:'{{item.font}}'">发信人：{{item.uname}}</view>
+          <view class="date" style="font-family:'{{item.font}}'">抵达日期：{{item.lettertime}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- <view class="container">
+  <view class="letterview">
+    <block wx:for='{{letterdata}}' wx:for-item="item">
+      <view class="letter" style="background-color:{{item.themecolor}}">
+        <view class="line">
+          <image src="{{item.backimg}}" class="backimg"></image>
+          <view class="zhezhao"></view>
+          <view class="content" style="color:{{item.lettertcolor}};font-family:'{{item.lettertstyle}}'">{{item.content}}
+          </view>
+          <view class="name">发信人：{{item.uname}}</view>
+          <view class="date">抵达日期：{{item.lettertime}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view> -->

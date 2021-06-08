@@ -266,7 +266,7 @@
 		data.lettertime = letterTime.value;
 		data.fontid = fontId.value;
 		data.backimgid = backimgId.value;
-		data.lcontent = lContent.value;
+		data.content = lContent.value;
 		fetch(url, {
 			method: 'POST',
 			mode: "no-cors",
@@ -278,7 +278,20 @@
 			.catch(error => console.error('Error:', error))
 			.then(response => console.log('Success:', response));
 	}
+	function resolvingDate(date) {
+		//date是传入的时间
+		let d = new Date(date);
 
+		let month = (d.getMonth() + 1) < 10 ? '0' + (d.getMonth() + 1) : (d.getMonth() + 1);
+		let day = d.getDate() < 10 ? '0' + d.getDate() : d.getDate();
+		let hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
+		let min = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+		let sec = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
+
+		let times = d.getFullYear() + '-' + month + '-' + day + ' ' + hours + ':' + min + ':' + sec;
+
+		return times
+	}
 	//get方法 
 	// fetch('http://www.lllh.club:1234/timeletter/timeletter')
 	fetch('http://localhost:1111/timereceiveletter/gettimeReceive')
@@ -295,10 +308,10 @@
 				html += `
             <tr>
                 <td>${timeletter[i].letterid}</td>
-                <td>${timeletter[i].lettertime}</td>
+                <td>${resolvingDate(timeletter[i].lettertime)}</td>
                 <td>${timeletter[i].fontid}</td>
                 <td>${timeletter[i].backimgid}</td>
-                <td>${timeletter[i].lcontent}</td>
+                <td>${timeletter[i].content}</td>
                 <td><button onclick="deltimeletter(${timeletter[i].letterid}) ">删除</button></td>
             </tr>
             `

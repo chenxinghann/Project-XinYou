@@ -80,13 +80,13 @@
 								<thead>
 									<tr>
 										<th>树洞id</th>
-										<th>用户id</th>
-										<th>内容id</th>
-										<th>内容</th>
+										<!-- <th>用户id</th> -->
+										<th>留言id</th>
+										<th>洞主回复</th>
 										<th>操作</th>
 									</tr>
 								</thead>
-								<tbody id="tb"></tbody>	
+								<tbody id="tb"></tbody>
 							</table>
 							<div>
 								<button>首页</button>
@@ -99,8 +99,8 @@
 								<br />
 								<form action="">
 									<input type="number" id="treeid" value="" /> 树洞id<br />
-									<input type="number" id="userid" value="" /> 用户id <br />
-									<input type="number" id="messagecontentid" value="" /> 内容id<br />
+									<!-- <input type="number" id="userid" value="" /> 用户id <br /> -->
+									<input type="number" id="messagecontentid" value="" /> 留言id<br />
 									<input type="text" id="messagecontent" value="" /> 内容<br />
 									<button onclick="add()">确定</button>
 								</form>
@@ -221,7 +221,7 @@
 	function deletemess(id) {
 		var url = 'http://localhost:1111/message/delmess';
 		var data = {
-			treeid: id
+			id: id
 		};
 
 		fetch(url, {
@@ -246,17 +246,18 @@
 	}
 
 	function addMess() {
-		var url = 'http://localhost:1111/message/getmess';
+		// var url = 'http://localhost:1111/message/getmess';
+		var url = 'http://10.7.86.184:1111/tree/messageanswer';
 		var data = {};
 
 		var treed = document.getElementById("treeid");
 		var userd = document.getElementById("userid");
 		var messagecontentid = document.getElementById("messagecontentid");
 		var messagecontent = document.getElementById("messagecontent");
-		data.treeid = treeid.value; 
-		data.userid = userid.value; 
-		data.messagecontentid = messagecontentid.value; 
-		data.messagecontent = messagecontent.value; 
+		data.treeid = treeid.value;
+		data.userid = userid.value;
+		data.messagecontentid = messagecontentid.value;
+		data.answer = messagecontent.value;
 		fetch(url, {
 			method: 'POST',
 			mode: "no-cors",
@@ -275,7 +276,7 @@
 						"<td>" + seemessage[i].treeid + "</td>" +
 						"<td>" + seemessage[i].userid + "</td>" +
 						"<td>" + seemessage[i].messagecontentid + "</td>" +
-						"<td>" + seemessage[i].messagecontent + "</td>" +
+						"<td>" + seemessage[i].answer + "</td>" +
 						"<td>" + "<button>" + "删除" + "</button>" + "</td>"
 					var trNode = document.createElement("tr");
 					trNode.innerHTML = tdNode;
@@ -286,44 +287,47 @@
 	//显示
 	let mess = [];
 
-        fetch('http://localhost:1111/message/getmess')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(myJson) {
-                getmess(myJson);
-            })
-            .catch(err => {
-                alert(err.message)
-            })
+	// fetch('http://localhost:1111/message/getmess')
+	fetch('http://10.7.86.184:1111/tree/messageanswer')
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (myJson) {
+			getmess(myJson);
+		})
+		.catch(err => {
+			alert(err.message)
+		})
 
-        function getmess(myJson) {
-            myJson.data.map((item, index) => {
-                mess[index] = {
-                    treeid: item.treeid,
-                    userid: item.userid,
-                    messagecontentid: item.messagecontentid,
-					messagecontent: item.messagecontent,
-                }
-            })
-            showMess();
-        }
+	function getmess(myJson) {
+		console.log(myJson)
+		myJson.map((item, index) => {
+			mess[index] = {
+				treeid: item.treeid,
+				userid: item.userid,
+				messagecontentid: item.messagecontentid,
+				answer: item.answer,
+			}
+		})
+		showMess();
+	}
 
-        function showMess() {
-            let html = ''
-            for (let i = 0; i < mess.length; i++) {
-                html += `
+	function showMess() {
+		let html = ''
+		for (let i = 0; i < mess.length; i++) {
+			// <td>${mess[i].userid}</td>
+			html += `
             <tr>
-                <td>${mess[i].treeid}</td>
-                <td>${mess[i].userid}</td>
-                <td>${mess[i].messagecontentid}</td>
-				<td>${mess[i].messagecontent}</td>
-                <td><button onclick="del(${mess[i].treeid}) ">删除</button></td>
+              <td>${mess[i].treeid}</td>
+              
+              <td>${mess[i].messagecontentid}</td>
+							<td>${mess[i].answer}</td>
+              <td><button onclick="del(${mess[i].id}) ">删除</button></td>
             </tr>
             `
-            }
-            document.getElementById('tb').innerHTML = html
-        }
+		}
+		document.getElementById('tb').innerHTML = html
+	}
 
 	// 查询
 	function tableFilter() {

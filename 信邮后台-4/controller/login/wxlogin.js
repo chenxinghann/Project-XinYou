@@ -1,7 +1,8 @@
 'use strict'
 
-const gohttp = require('gohttp')
+const gohttp = require('gohttp').httpcli
 let openid = '';
+let token_key = 'qwertyuiopasdfghjklzxcvbnm123456'
 class wxlogin {
 	constructor() {
 		this.param = '/'
@@ -10,18 +11,13 @@ class wxlogin {
 	async get(c) {
 		console.log('c.query.code', c.query.code)
 		//使用gohttp发起请求，调用小程序服务端API
-		// var login_url = `https://api.weixin.qq.com/sns/jscode2session`
-		// 	+ `?appid=wx3155f27af04b2337`
-		// 	+ `&secret=45eaaeaea4517824f749b4f728aa674a`
-		// 	+ `&js_code=${c.query.code}`
-		// 	+ `&grant_type=authorization_code`
-			var login_url = `https://api.weixin.qq.com/sns/jscode2session
-			?appid=wx3155f27af04b2337
-			&secret=45eaaeaea4517824f749b4f728aa674a
-			&js_code=${c.query.code}
-			&grant_type=authorization_code`
+			let login_url = `https://api.weixin.qq.com/sns/jscode2session`
+			+`?appid=wx3155f27af04b2337`
+			+`&secret=45eaaeaea4517824f749b4f728aa674a`
+			+`&js_code=${c.query.code}`
+			+`&grant_type=authorization_code`
 		//获取的结果是一个对象，包括headers，status，OK，data等属性
-		let result=await gohttp.get(login_url)
+		let result = await gohttp.get(login_url)
 		let r = result.json()
 		console.log('ok')
 		console.log(`r.openid是:${r.openid}`)
@@ -37,7 +33,8 @@ class wxlogin {
 			timestamp: Date.now(),
 			random: Math.random()
 		}
-		let token = c.helper.aesEncrypt(JSON.stringify(info), c.service.tokenKey)
+		// let token = c.helper.aesEncrypt(JSON.stringify(info), c.service.tokenKey)
+		let token = c.helper.aesEncrypt(JSON.stringify(info), token_key)
 		c.send(token)
 	}
 	async post(c) {
@@ -46,9 +43,9 @@ class wxlogin {
 		d.openid = openid
 		// console.log(`d:${d}`)
 		// console.log(`最近登录用户${d}`)
-		console.log(`最近登录用户${d.uid}`)
-		console.log(`最近登录用户${d.uname}`)
-		console.log(`最近登录用户${d.openid}`)
+		console.log(`最近登录用户的uid:${d.uid}`)
+		console.log(`最近登录用户的uname:${d.uname}`)
+		console.log(`最近登录用户的openID:${d.openid}`)
 		
 		let data1 = await c.service.model.wxlogin.insert(d)
 		c.send(data1)
